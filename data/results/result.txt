@@ -1,0 +1,110 @@
+************************** TOP 20 POOLS FOR ETHEREUM **************************
+Pair:	WSBC/WETH	 | TVL:	22559	 | 24h vol:	427540		 | Vitality:	18.95	 | Address:	0x084f19491f9b216868c2a070881f601e7dd4aa65
+Pair:	PAW/WETH	 | TVL:	4265	 | 24h vol:	75520		 | Vitality:	17.71	 | Address:	0xbcc489a50f0e2f09aec2d6f33ffe950cb6c39295
+Pair:	POOH/WETH	 | TVL:	23684	 | 24h vol:	402678		 | Vitality:	17	 | Address:	0xc4b186b57d584262dd73bea4b702805a408c8b20
+Pair:	TURBO/WETH	 | TVL:	4696907	 | 24h vol:	70509989	 | Vitality:	15.01	 | Address:	0x7baece5d47f1bc5e1953fbe0e9931d54dab6d810
+Pair:	CLIPS/WETH	 | TVL:	99998	 | 24h vol:	1222710		 | Vitality:	12.23	 | Address:	0x69d8836d5f896cf35c112ef127fc8f4487c30d77
+Pair:	$MONG/WETH	 | TVL:	379066	 | 24h vol:	4536330		 | Vitality:	11.97	 | Address:	0x95ad5d38ad6bb17500e9a57bfeb6569b36a94ea5
+Pair:	GENSLR/WETH	 | TVL:	73757	 | 24h vol:	664715		 | Vitality:	9.01	 | Address:	0xe483574ff694e58d3494614698254442504e1022
+Pair:	BOB/WETH	 | TVL:	583337	 | 24h vol:	5069974		 | Vitality:	8.69	 | Address:	0x9af99712d45a972a23eabee205342f6055ada474
+Pair:	PEPE/WETH	 | TVL:	6203264	 | 24h vol:	131686643	 | Vitality:	6.37	 | Address:	0x11950d141ecb863f01007add7d1a342041227b58
+Pair:	PEPE/USDC	 | TVL:	244431	 | 24h vol:	1472761		 | Vitality:	6.03	 | Address:	0xcee31c846cbf003f4ceb5bbd234cba03c6e940c7
+Pair:	TURBO/USDC	 | TVL:	7008	 | 24h vol:	39092		 | Vitality:	5.58	 | Address:	0x3a49de76496d1769ad4c92e76df398e47fb5d28c
+Pair:	4CHAN/WETH	 | TVL:	9855	 | 24h vol:	47268		 | Vitality:	4.8	 | Address:	0xe2602b3aa526d838ccd3b531baa3133cfd54463b
+Pair:	POOR/WETH	 | TVL:	5377	 | 24h vol:	24300		 | Vitality:	4.52	 | Address:	0xe720c2641e11bc912ea3eaee972dc0a6c8e7ad50
+Pair:	pepecoin/WETH	 | TVL:	51253	 | 24h vol:	223668		 | Vitality:	4.36	 | Address:	0x87f9eaede70419f704b361cf040693a30d731dcf
+Pair:	YMOM/WETH	 | TVL:	9156	 | 24h vol:	36665		 | Vitality:	4	 | Address:	0x9923652d28deb3c9452f24eff7f5ec4ad1b9a7ed
+Pair:	PPIZZA/WETH	 | TVL:	116850	 | 24h vol:	446435		 | Vitality:	3.82	 | Address:	0xa28b4db4a30f852bff750b0d6a79de728b4719fa
+Pair:	WSB/WETH	 | TVL:	12954	 | 24h vol:	43867		 | Vitality:	3.39	 | Address:	0x23da3feecae09105df5447d22114f157b656e29c
+Pair:	PEPE/WETH	 | TVL:	3543441	 | 24h vol:	11928258	 | Vitality:	3.37	 | Address:	0xf239009a101b6b930a527deaab6961b6e7dec8a6
+Pair:	WOJAK/WETH	 | TVL:	501644	 | 24h vol:	1641733		 | Vitality:	3.27	 | Address:	0x7316f8dd242974f0fd7b16dbcc68920b96bc4db1
+Pair:	WSB/WETH	 | TVL:	71093	 | 24h vol:	179624		 | Vitality:	2.53	 | Address:	0xdab040a387cb425357392a6693730e34a289770c
+
+************************** TOP 20 POOLS FOR OPTIMISM **************************
+Pair:	STG/USDC	 | TVL:	1928	 | 24h vol:	4855		 | Vitality:	2.52	 | Address:	0x793aca81b02f9e8e073047d2347da0c16e5ecd92
+Pair:	STG/WETH	 | TVL:	3504	 | 24h vol:	3311		 | Vitality:	0.94	 | Address:	0x0fcd58c457d71bf630a44a41437537e0d5be7ed8
+Pair:	vSOL/vUSD	 | TVL:	701528	 | 24h vol:	1504704		 | Vitality:	0.64	 | Address:	0xf993cc412edf1257f3e771bb744645daf4c19b14
+Pair:	vCRV/vUSD	 | TVL:	599068	 | 24h vol:	1196828		 | Vitality:	0.6	 | Address:	0x6e39acc0dd292a70d92c447ebccb8728f4ed5fe4
+Pair:	vMATIC/vUSD	 | TVL:	609084	 | 24h vol:	1205990		 | Vitality:	0.59	 | Address:	0x6f59c163ad6cc896145af7d5922d1eae174a1bcc
+Pair:	vOP/vUSD	 | TVL:	785150	 | 24h vol:	1394408		 | Vitality:	0.53	 | Address:	0x7b59a5d2f0ae215233989ada5fb872d9df727ced
+Pair:	vDOGE/vUSD	 | TVL:	531503	 | 24h vol:	869429		 | Vitality:	0.49	 | Address:	0x7a5d3da4658e9315e7d385b8a25d92cece6e6fab
+Pair:	vAVAX/vUSD	 | TVL:	693336	 | 24h vol:	1034144		 | Vitality:	0.45	 | Address:	0x14bc698fdc368f2487d3ead12dff458e7c272047
+Pair:	vFLOW/vUSD	 | TVL:	809925	 | 24h vol:	1228345		 | Vitality:	0.45	 | Address:	0xd26ffdde6c0daaabeb0a6806221c6b9fe7519bdf
+Pair:	vFTM/vUSD	 | TVL:	686889	 | 24h vol:	1011196		 | Vitality:	0.44	 | Address:	0xaec0bf409bb28efe308108d400034650c4d9ec75
+Pair:	vNEAR/vUSD	 | TVL:	750232	 | 24h vol:	1094195		 | Vitality:	0.44	 | Address:	0x2534d4f1325aa7d3fc8d5d14f224e5c587a719b0
+Pair:	vATOM/vUSD	 | TVL:	735930	 | 24h vol:	1019327		 | Vitality:	0.42	 | Address:	0xb98e6912ae77c643957ed51dcf755895ec4bc6b4
+Pair:	UNIDX/OP	 | TVL:	6173	 | 24h vol:	2573		 | Vitality:	0.42	 | Address:	0xc7d69bb5814ce3c08559640aa8451cc4b615ad33
+Pair:	vSAND/vUSD	 | TVL:	505068	 | 24h vol:	690597		 | Vitality:	0.41	 | Address:	0xe4a1645dde99c20d126c24b8dd1d1a4bc4a88e4c
+Pair:	vPERP/vUSD	 | TVL:	983393	 | 24h vol:	1264500		 | Vitality:	0.39	 | Address:	0x86f03c6e26b0488b6e39b34d7f10d843ae8e3d1b
+Pair:	vETH/vUSD	 | TVL:	10329958	 | 24h vol:	12635171	 | Vitality:	0.37	 | Address:	0x36b18618c4131d8564a714fb6b4d2b1edadc0042
+Pair:	vAPE/vUSD	 | TVL:	585198	 | 24h vol:	654288		 | Vitality:	0.34	 | Address:	0x05b552c0a787c228624b389d51eb4277e1f0f348
+Pair:	vBNB/vUSD	 | TVL:	1223287	 | 24h vol:	1291650		 | Vitality:	0.32	 | Address:	0xf4d40ebcbf7063d4ff56c6df0179a86287c648de
+Pair:	VELO/OP		 | TVL:	5404	 | 24h vol:	1755		 | Vitality:	0.32	 | Address:	0x0bc57f58043a0004554865f9dd317ea7319f151d
+Pair:	VELO/USDC	 | TVL:	40335	 | 24h vol:	12105		 | Vitality:	0.3	 | Address:	0xa1658249bcc69b0ab491cdc0449c0b0ea796de8d
+
+************************** TOP 20 POOLS FOR POLYGON **************************
+Pair:	WLOKA/WMATIC	 | TVL:	6123	 | 24h vol:	9991		 | Vitality:	1.63	 | Address:	0xa3e4a17043b337687ff7965dec827d9154b0dd1c
+Pair:	mXEN/WMATIC	 | TVL:	72461	 | 24h vol:	117063		 | Vitality:	1.62	 | Address:	0x97ffb2574257280e0fb2fa522345f0e81faae711
+Pair:	DST/WMATIC	 | TVL:	5217	 | 24h vol:	8140		 | Vitality:	1.56	 | Address:	0x9ac431aa4a30f8881d01ea0ab648208aa5b842d2
+Pair:	mFENIX/mXEN	 | TVL:	9999	 | 24h vol:	12973		 | Vitality:	1.3	 | Address:	0xe820318dc391b84d8305ad836ce998660f116b43
+Pair:	mDXN/WMATIC	 | TVL:	7026	 | 24h vol:	8242		 | Vitality:	1.17	 | Address:	0x71712858e5536a2ef199b045e773fa230811821e
+Pair:	UNIM/USDC	 | TVL:	17839	 | 24h vol:	16620		 | Vitality:	0.93	 | Address:	0xdb11b39d8acdc877c58392e996a4a88424483705
+Pair:	ICHI/USDC	 | TVL:	3611	 | 24h vol:	3065		 | Vitality:	0.85	 | Address:	0x499277a14d1edb5583dd070a447deda19e7abf85
+Pair:	mXEN/WETH	 | TVL:	2233	 | 24h vol:	1817		 | Vitality:	0.81	 | Address:	0x80c3425573bb1c4f947fb9b4b45679c754a88245
+Pair:	STG/WMATIC	 | TVL:	65060	 | 24h vol:	45684		 | Vitality:	0.7	 | Address:	0x190be4d73196ac630abeebaaf69fe77211d54dba
+Pair:	FDT/USDT	 | TVL:	7106	 | 24h vol:	4944		 | Vitality:	0.7	 | Address:	0x3b7a1a7f5c90bb84cc93268e77dff1a86af1c520
+Pair:	SOL/USDC	 | TVL:	3580	 | 24h vol:	2427		 | Vitality:	0.68	 | Address:	0xdd86c721b2d286925171c79907ed1cb4542144d1
+Pair:	UPO/WMATIC	 | TVL:	4679	 | 24h vol:	2706		 | Vitality:	0.58	 | Address:	0x61fe8202364deb02bfe28f6d749d168a334fde6b
+Pair:	mXEN/USDC	 | TVL:	2844	 | 24h vol:	1535		 | Vitality:	0.54	 | Address:	0x47e836f2f86ae34b3db03bf08f79a7ceed0b0b21
+Pair:	NAKA/WMATIC	 | TVL:	35579	 | 24h vol:	18509		 | Vitality:	0.52	 | Address:	0xe6c36eed27c2e8ecb9a233bf12da06c9730b5955
+Pair:	ANKR/WMATIC	 | TVL:	3079	 | 24h vol:	4989		 | Vitality:	0.49	 | Address:	0xae20515e3de8dbb002cab308fa3f9b6b118b6229
+Pair:	GHST/WMATIC	 | TVL:	4569	 | 24h vol:	2154		 | Vitality:	0.47	 | Address:	0x5f3799e894d7579bc69624b24f8f8b90e09c567e
+Pair:	DIMO/USDC	 | TVL:	34350	 | 24h vol:	15447		 | Vitality:	0.45	 | Address:	0xd48cb7ad6a0e2137ea81803c63d2863206ce4700
+Pair:	WRLD/WMATIC	 | TVL:	6531	 | 24h vol:	2584		 | Vitality:	0.4	 | Address:	0x4ff09b032d4a2c7401a0f920ce44623f309f0072
+Pair:	SAND/USDC	 | TVL:	5238	 | 24h vol:	6740		 | Vitality:	0.39	 | Address:	0xb69d18170a7d949777ead872cc6ba7cabb78fcfc
+Pair:	mFENIX/USDC	 | TVL:	3177	 | 24h vol:	4040		 | Vitality:	0.38	 | Address:	0x9550719de7e917959c9dbba08616288495544840
+
+************************** TOP 20 POOLS FOR ARBITRUM **************************
+Pair:	spacedoge/WETH	 | TVL:	3858	 | 24h vol:	191679		 | Vitality:	49.68	 | Address:	0x375fa2788097a85055f7777e375508c2354e873e
+Pair:	AISCODE/USDC	 | TVL:	2917	 | 24h vol:	88886		 | Vitality:	30.47	 | Address:	0x665655c47e6098f67eb3c7b21c1926f0314186a4
+Pair:	WODIU/WETH	 | TVL:	9739	 | 24h vol:	211346		 | Vitality:	21.7	 | Address:	0x525b2b825e3fa9fea988f53f8253f9d252998fc2
+Pair:	PiPi/WETH	 | TVL:	10068	 | 24h vol:	473711		 | Vitality:	14.12	 | Address:	0xcd226c7fbc6b748caa1607377d1829ecbe354783
+Pair:	pogai/USDT	 | TVL:	4402	 | 24h vol:	47902		 | Vitality:	10.88	 | Address:	0x7b7b379e77abaefc3cedad25e8300bfc4c23b62e
+Pair:	sohi /WETH	 | TVL:	143367	 | 24h vol:	1438311		 | Vitality:	10.03	 | Address:	0xb38a3926f37f0a5f98ea158233c611a1b5361698
+Pair:	AICODE/WETH	 | TVL:	51119	 | 24h vol:	1659730		 | Vitality:	9.74	 | Address:	0x2a31b63c3a2a2c06e4aaa624071880b72a122fb1
+Pair:	AICODE/WETH	 | TVL:	10261	 | 24h vol:	60384		 | Vitality:	5.88	 | Address:	0xe6a9333b06964ff6ae98d3e940584bf306fb0259
+Pair:	DROP/WETH	 | TVL:	1133	 | 24h vol:	6498		 | Vitality:	5.74	 | Address:	0xe34cb1c3619c9de9e98342949d452e8518710b35
+Pair:	AIDOGE/WBTC	 | TVL:	40636	 | 24h vol:	211321		 | Vitality:	5.2	 | Address:	0x00765cdf4caa7cf0df556eeb7144c73e046988f3
+Pair:	CHR/USDC	 | TVL:	3705	 | 24h vol:	16508		 | Vitality:	4.46	 | Address:	0x8ad4a5f1e30c1b33af161cc2b19e9aec6569b98f
+Pair:	pogai/WETH	 | TVL:	1520891	 | 24h vol:	6649122		 | Vitality:	4.37	 | Address:	0x1862200e8e7ce1c0827b792d0f9546156f44f892
+Pair:	CHUNKS/WETH	 | TVL:	1172	 | 24h vol:	4460		 | Vitality:	3.81	 | Address:	0xfa146200665e391114fbc6a42b7422b1ebf40b34
+Pair:	AISCODE/WETH	 | TVL:	3529	 | 24h vol:	44429		 | Vitality:	3.78	 | Address:	0x7cd4ac215ef9bb4b786415b600035b7d0fb90bda
+Pair:	suoha/WETH	 | TVL:	9844	 | 24h vol:	112756		 | Vitality:	3.44	 | Address:	0x2474b1754d2e0e54e67920917cecee2fdf874349
+Pair:	shibai/WETH	 | TVL:	1884	 | 24h vol:	5849		 | Vitality:	3.1	 | Address:	0xa7089d16e7bd78d3a4ffe5b2beb0acc7cb9ba523
+Pair:	AICODE/USDT	 | TVL:	12351	 | 24h vol:	31319		 | Vitality:	2.54	 | Address:	0xb6cca513eb79833c09c0a4c50ed2c897c5574cb3
+Pair:	CHR/WETH	 | TVL:	29220	 | 24h vol:	60880		 | Vitality:	2.08	 | Address:	0xbf30b73504ac4dfb022c4e6ee111839ca09b0d34
+Pair:	JOE/WETH	 | TVL:	208353	 | 24h vol:	425831		 | Vitality:	2.04	 | Address:	0x809e6d99967164f4e212bf96953712f609e1e22b
+Pair:	ZZZ/USDC	 | TVL:	3055	 | 24h vol:	5403		 | Vitality:	1.77	 | Address:	0x3f1398340d1bdc46191c4f16e4dc9c9f04f7c67e
+
+************************** TOP 20 POOLS FOR BSC **************************
+Pair:	STG/WBNB	 | TVL:	3968	 | 24h vol:	4049		 | Vitality:	1.02	 | Address:	0x63c7d2c80e2e1cf1f31d263a3601fc46dbd347d4
+Pair:	bXEN/WBNB	 | TVL:	19223	 | 24h vol:	16300		 | Vitality:	0.85	 | Address:	0x85d3f8a47314eeb541e2ee1bc7af44efb7c28cf1
+Pair:	LGO/WBNB	 | TVL:	41039	 | 24h vol:	33425		 | Vitality:	0.81	 | Address:	0xefe64730fa4a0c0dd01e68011af58c30e0e5f152
+Pair:	LVL/WBNB	 | TVL:	293257	 | 24h vol:	181919		 | Vitality:	0.62	 | Address:	0x7f9d307973cdabe42769d9712df8ee1cc1a28d10
+Pair:	WBNB/BUSD	 | TVL:	3649	 | 24h vol:	43020		 | Vitality:	0.59	 | Address:	0xcb99fe720124129520f7a09ca3cbef78d58ed934
+Pair:	LGO/USDC	 | TVL:	85009	 | 24h vol:	47621		 | Vitality:	0.56	 | Address:	0x9b501a7ad3087d603ceb34424b7b2a6c348ad0b7
+Pair:	LGO/USDT	 | TVL:	8589	 | 24h vol:	4418		 | Vitality:	0.51	 | Address:	0xb7045096c6396091b150c43ece9f84e5991278a2
+Pair:	DOGE/USDT	 | TVL:	105005	 | 24h vol:	48819		 | Vitality:	0.46	 | Address:	0x023b6298e2f9ae728b324757599f2a36e002a55a
+Pair:	DAO/WBNB	 | TVL:	13731	 | 24h vol:	5265		 | Vitality:	0.38	 | Address:	0xffaad343776d30fd85bed48e8a7831c98b4ce4a2
+Pair:	TWT/USDT	 | TVL:	2424	 | 24h vol:	2553		 | Vitality:	0.32	 | Address:	0x4ef938b633d704f29e593a8b51148d43429d0bc4
+Pair:	1INCH/USDT	 | TVL:	2085	 | 24h vol:	2012		 | Vitality:	0.29	 | Address:	0xf624649736a106f2aa16e8027ce9aeed1bcd22f9
+Pair:	RDNT/WBNB	 | TVL:	5044	 | 24h vol:	1152		 | Vitality:	0.23	 | Address:	0x7bcc079855b3c8930a5f172b8d8bdeb68d9214ef
+Pair:	ETH/USDT	 | TVL:	45440	 | 24h vol:	9107		 | Vitality:	0.2	 | Address:	0x87c029bbb64c39a2a6762ac0e031757d2974e275
+Pair:	TWT/WBNB	 | TVL:	21690	 | 24h vol:	13563		 | Vitality:	0.19	 | Address:	0x2cd97604ef77bbcb1fa0cff47545dff8ec7def08
+Pair:	bDXN/bXEN	 | TVL:	3806	 | 24h vol:	1562		 | Vitality:	0.12	 | Address:	0xbe6766591bf836507a5f3eae2368f2ea7ad515c1
+Pair:	ID/USDT		 | TVL:	9861	 | 24h vol:	1143		 | Vitality:	0.12	 | Address:	0xd0a5e2818a23e2054449982fb9ff9575867cf92b
+Pair:	ETH/USDC	 | TVL:	30816	 | 24h vol:	11356		 | Vitality:	0.11	 | Address:	0x17507bef4c3abc1bc715be723ee1baf571256e05
+Pair:	ETH/WBNB	 | TVL:	965232	 | 24h vol:	1564946		 | Vitality:	0.08	 | Address:	0x0f338ec12d3f7c3d77a4b9fcc1f95f3fb6ad0ea6
+Pair:	WBNB/USDC	 | TVL:	52688	 | 24h vol:	83024		 | Vitality:	0.08	 | Address:	0x5289a8dbf7029ee0b0498a84777ed3941d9acfec
+Pair:	BTCB/USDT	 | TVL:	9522	 | 24h vol:	1858		 | Vitality:	0.06	 | Address:	0x06396509195eb9e07c38a016694dc9ff535b128a
+

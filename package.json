@@ -1,0 +1,19 @@
+{
+  "name": "crypto-vitality",
+  "version": "0.0.1",
+  "description": "An app which shows hottest uni v3 pools right now",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konstaku"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": "Konstantin Kupriyanov",
+  "license": "ISC"
+}
