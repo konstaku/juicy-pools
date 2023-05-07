@@ -44,7 +44,6 @@ async function fetchPoolData(chainsAndPools) {
 		await fetchPoolsForChain(chainsAndPools[i]);
 		sortPoolsByVitality(chainsAndPools[i]);
 		selectTop20Pools(chainsAndPools[i]);
-		console.log('********', chainsAndPools[i])
 	//	result.push(makeTable(chainsAndPools[i]));
 		result.push(formatMessage(chainsAndPools[i]))
 	}
