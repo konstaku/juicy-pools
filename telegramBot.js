@@ -2,7 +2,7 @@
 
 import TelegramBot from 'node-telegram-bot-api';
 
-const token = '6272930700:AAEQx7fj58yc1Ipm7QuBEm5Ofk6yELIv4lM';
+const token = '6272930700:AAHwYpqBoXPWpA_apNoBABptdQ-asNfLAQM';
 const chat = 5950535;
 const options = {
     parse_mode: "HTML",
