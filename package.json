@@ -15,5 +15,8 @@
     "ethereum"
   ],
   "author": "Konstantin Kupriyanov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.61.0"
+  }
 }

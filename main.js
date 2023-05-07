@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'fs';
 import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
+import { updateBot, formatMessage } from './telegramBot.js';
 
 async function prepareFetchData(chains) {
 	console.log('Preparing blockchain data...');
@@ -41,7 +42,9 @@ async function fetchPoolData(chainsAndPools) {
 		await fetchPoolsForChain(chainsAndPools[i]);
 		sortPoolsByVitality(chainsAndPools[i]);
 		selectTop20Pools(chainsAndPools[i]);
-		result.push(makeTable(chainsAndPools[i]));
+		console.log('********', chainsAndPools[i])
+	//	result.push(makeTable(chainsAndPools[i]));
+		result.push(formatMessage(chainsAndPools[i]))
 	}
 
 	return result;
@@ -90,6 +93,7 @@ async function fetchPoolsForChain(poolList) {
 			continue;
 		}
 
+		pool.url = entry.url;
 		pool.tvl = Math.round(entry.liquidity.usd) || null;
 		pool.volume = Math.round(entry.volume.h24);
 		pool.vitality = Math.round(pool.volume / pool.tvl * pool.fees * 100) / 100 || null;
@@ -106,6 +110,14 @@ function sortPoolsByVitality(poolList) {
 
 function selectTop20Pools(poolList) {
 	poolList.pools = poolList.pools.slice(0, 20);
+}
+
+function updateTelegramBot(data) {
+	console.log('Updating telegram bot...');
+
+	for (const entry of data) {
+		updateBot(entry);
+	}
 }
 
 async function writeDataToDisk(data) {
@@ -150,5 +162,5 @@ function makeTable(poolList) {
 refreshPoolsAndFeesData(poolList)
 	.then(pools => prepareFetchData(pools.map(el => el.network)))
 	.then(result => fetchPoolData(result))
-	.then(data => writeDataToDisk(data))
+	.then(data => updateTelegramBot(data))
 	.catch(e => console.log(e));
