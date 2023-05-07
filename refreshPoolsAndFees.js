@@ -1,3 +1,5 @@
+'use strict';
+
 import { writeFile } from 'fs';
 
 const DUNE_API_KEY = 'o0T6Pl9KPv2fjRgqnhDegftHX5RSbg2z';

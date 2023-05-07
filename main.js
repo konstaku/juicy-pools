@@ -1,6 +1,8 @@
+'use strict';
+
 import { readFile, writeFile } from 'fs';
 import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
-import { updateBot, formatMessage } from './telegramBot.js';
+import { bot, updateBot, formatMessage } from './telegramBot.js';
 
 async function prepareFetchData(chains) {
 	console.log('Preparing blockchain data...');
@@ -163,4 +165,8 @@ refreshPoolsAndFeesData(poolList)
 	.then(pools => prepareFetchData(pools.map(el => el.network)))
 	.then(result => fetchPoolData(result))
 	.then(data => updateTelegramBot(data))
-	.catch(e => console.log(e));
+	.catch(e => console.log(e))
+	.finally(() => {
+		bot.stopPolling();
+		console.log('All pool data read successfully!');
+	});

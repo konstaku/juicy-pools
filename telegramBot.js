@@ -1,3 +1,5 @@
+'use strict';
+
 import TelegramBot from 'node-telegram-bot-api';
 
 const token = '6272930700:AAEQx7fj58yc1Ipm7QuBEm5Ofk6yELIv4lM';
@@ -7,7 +9,7 @@ const options = {
     disable_web_page_preview: true,
 };
 
-const bot = new TelegramBot(token, { polling: true });
+export const bot = new TelegramBot(token, { polling: true });
 
 export async function updateBot(text) {
     bot.sendMessage(chat, text.toString(), options);
