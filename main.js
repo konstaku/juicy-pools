@@ -113,11 +113,11 @@ function selectTop20Pools(poolList) {
 	poolList.pools = poolList.pools.slice(0, 20);
 }
 
-function updateTelegramBot(data) {
+async function updateTelegramBot(data) {
 	console.log('Updating telegram bot...');
 
 	for (const entry of data) {
-		updateBot(entry);
+		await updateBot(entry);
 	}
 }
 
@@ -168,4 +168,5 @@ refreshPoolsAndFeesData(poolList)
 	.finally(() => {
 		bot.stopPolling();
 		console.log('All pool data read successfully!');
+		process.exit();
 	});

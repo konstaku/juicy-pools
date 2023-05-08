@@ -17,6 +17,7 @@
   "author": "Konstantin Kupriyanov",
   "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.61.0"
+    "node-telegram-bot-api": "^0.61.0",
+    "uuid": "^9.0.0"
   }
 }

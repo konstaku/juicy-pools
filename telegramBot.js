@@ -12,7 +12,12 @@ const options = {
 export const bot = new TelegramBot(token, { polling: true });
 
 export async function updateBot(text) {
-    bot.sendMessage(chat, text.toString(), options);
+    try {
+        await bot.sendMessage(chat, text.toString(), options);
+        console.log('Telegram bot updated');
+    } catch (err) {
+        console.log('Error updating telegram:', err);
+    }
 }
 
 export function formatMessage(data) {
