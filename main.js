@@ -166,7 +166,9 @@ refreshPoolsAndFeesData(poolList)
 	.then(data => updateTelegramBot(data))
 	.catch(e => console.log(e))
 	.finally(() => {
-		bot.stopPolling();
+		if (bot.isPolling()) {
+			bot.stopPolling();
+			console.log('bot polling stopped');
+		}
 		console.log('All pool data read successfully!');
-		process.exit();
 	});

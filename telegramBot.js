@@ -9,7 +9,7 @@ const options = {
     disable_web_page_preview: true,
 };
 
-export const bot = new TelegramBot(token, { polling: true });
+export const bot = new TelegramBot(token);
 
 export async function updateBot(text) {
     try {
@@ -22,7 +22,7 @@ export async function updateBot(text) {
 
 export function formatMessage(data) {
 
-    let message = `🔥🔥🔥   Top 20 pools on ${data.chain}: 🔥🔥🔥`;
+    let message = `🔥🔥🔥 Top 20 pools on ${data.chain}: 🔥🔥🔥`;
 
     for (const pool of data.pools) {
         message += `
