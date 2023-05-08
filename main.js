@@ -1,6 +1,6 @@
 'use strict';
 
-import { express } from 'express';
+import express from 'express';
 import { readFile, writeFile } from 'fs';
 import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
 import { bot, updateBot, formatMessage } from './telegramBot.js';
