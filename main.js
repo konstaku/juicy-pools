@@ -1,8 +1,12 @@
 'use strict';
 
+import { exppress } from 'express';
 import { readFile, writeFile } from 'fs';
 import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
 import { bot, updateBot, formatMessage } from './telegramBot.js';
+
+const app = exppress();
+const PORT = process.env.PORT || 3030;
 
 async function prepareFetchData(chains) {
 	console.log('Preparing blockchain data...');
@@ -172,3 +176,7 @@ refreshPoolsAndFeesData(poolList)
 		}
 		console.log('All pool data read successfully!');
 	});
+
+app.listen(PORT, () => {
+	console.log(`Server started on port ${PORT}`);
+});
