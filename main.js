@@ -1,11 +1,11 @@
 'use strict';
 
-import { exppress } from 'express';
+import { express } from 'express';
 import { readFile, writeFile } from 'fs';
 import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
 import { bot, updateBot, formatMessage } from './telegramBot.js';
 
-const app = exppress();
+const app = express();
 const PORT = process.env.PORT || 3030;
 
 async function prepareFetchData(chains) {
