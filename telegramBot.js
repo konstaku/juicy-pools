@@ -3,7 +3,7 @@
 import TelegramBot from 'node-telegram-bot-api';
 
 const token = '6272930700:AAHwYpqBoXPWpA_apNoBABptdQ-asNfLAQM';
-const chat = 5950535;
+const chat = -1001968505370;
 const options = {
     parse_mode: "HTML",
     disable_web_page_preview: true,
