@@ -2,11 +2,15 @@
 
 import express from 'express';
 import { readFile, writeFile } from 'fs';
-import { poolList, refreshPoolsAndFeesData } from './refreshPoolsAndFees.js';
+import { poolList, refreshPoolData } from './refreshPoolsAndFees.js';
 import { bot, updateBot, formatMessage } from './telegramBot.js';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
+
+const server = app.listen(PORT, () => {
+	console.log(`Server started on port ${PORT}`);
+});
 
 async function prepareFetchData(chains) {
 	console.log('Preparing blockchain data...');
@@ -48,7 +52,6 @@ async function fetchPoolData(chainsAndPools) {
 		await fetchPoolsForChain(chainsAndPools[i]);
 		sortPoolsByVitality(chainsAndPools[i]);
 		selectTop20Pools(chainsAndPools[i]);
-	//	result.push(makeTable(chainsAndPools[i]));
 		result.push(formatMessage(chainsAndPools[i]))
 	}
 
@@ -66,7 +69,8 @@ async function fetchPoolsForChain(poolList) {
 	const pools = poolList.pools;
   
 	if (poolList.pools.length == 0) {
-		throw new Error('Unable to make batches, pool list empty');
+		console.log(`Unable to make batches for ${chain}, pool list empty`);
+		return poolList;
 	}
   
 	let currentPool = 0;
@@ -125,58 +129,15 @@ async function updateTelegramBot(data) {
 	}
 }
 
-async function writeDataToDisk(data) {
-	console.log('Saving data to disk...');
-
-	let textFile = '';
-
-	for (const entry of data) {
-		textFile += entry;
-	}
-
-	writeFile(`./data/results/result.txt`, textFile, (err) => {
-		if (err) {
-			console.log('Error writing file', err);
-		} else {
-			console.log('Data saved!');
-		}
-	});
-}
-
-// async function writeLog(rawData) {
-// 	const date = new Date();
-
-// 	writeFile(`./data/results/logs/${date.getFullYear()}-${date.getMonth()}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`, JSON.stringify(rawData), err => {
-// 		if (err) {
-// 			console.log('Error saving log!');
-// 		}
-// 	});
-// }
-
-function makeTable(poolList) {
-	let result = `************************** TOP ${poolList.pools.length} POOLS FOR ${poolList.chain.toUpperCase()} **************************` + '\n';
-	
-	for (const pool of poolList.pools) {
-		result += `Pair:\t${pool.name.length >= 8 ? pool.name : pool.name + '\t'}\t | TVL:\t${pool.tvl}\t | 24h vol:\t${pool.volume >= 10000000 ? pool.volume : pool.volume + '\t'}\t | Vitality:\t${pool.vitality}\t | Address:\t${pool.address}` + '\n';
-	}
-
-	result += '\n';
-	return result;
-}
-
-refreshPoolsAndFeesData(poolList)
+refreshPoolData(poolList)
 	.then(pools => prepareFetchData(pools.map(el => el.network)))
 	.then(result => fetchPoolData(result))
 	.then(data => updateTelegramBot(data))
 	.catch(e => console.log(e))
 	.finally(() => {
-		if (bot.isPolling()) {
-			bot.stopPolling();
-			console.log('bot polling stopped');
-		}
 		console.log('All pool data read successfully!');
+		server.close(() => {
+			console.log('Server shut down');
+			process.exit(0);
+		})
 	});
-
-app.listen(PORT, () => {
-	console.log(`Server started on port ${PORT}`);
-});

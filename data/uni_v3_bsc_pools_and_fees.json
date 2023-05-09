@@ -1,13 +1,25 @@
 {
-    "execution_id": "01GZRB68T4H8WR0MBZAFXKQ6DN",
+    "execution_id": "01H00ZQKKZJ5KK2ECFMC532PGM",
     "query_id": 2428404,
     "state": "QUERY_STATE_COMPLETED",
-    "submitted_at": "2023-05-06T10:54:44.548673Z",
-    "expires_at": "2023-08-04T11:38:09.370879Z",
-    "execution_started_at": "2023-05-06T11:37:55.879329Z",
-    "execution_ended_at": "2023-05-06T11:38:09.370878Z",
+    "submitted_at": "2023-05-09T19:27:39.648116Z",
+    "expires_at": "2023-08-07T19:28:36.994169Z",
+    "execution_started_at": "2023-05-09T19:27:55.019023Z",
+    "execution_ended_at": "2023-05-09T19:28:36.994168Z",
     "result": {
         "rows": [
+            {
+                "address": "0x51ed2b335d6cba03a67598c5d63b4decfa4e19ae",
+                "fees": 3000
+            },
+            {
+                "address": "0xf9878a5dd55edc120fde01893ea713a4f032229c",
+                "fees": 500
+            },
+            {
+                "address": "0x02fc5ceb0fd1241f2e90888a537933b9a78395c8",
+                "fees": 10000
+            },
             {
                 "address": "0xce7b7ac1011006cf0e535a39f9c6b6b0080891f1",
                 "fees": 10000
@@ -17,23 +29,31 @@
                 "fees": 3000
             },
             {
-                "address": "0xf9878a5dd55edc120fde01893ea713a4f032229c",
-                "fees": 500
-            },
-            {
-                "address": "0x51ed2b335d6cba03a67598c5d63b4decfa4e19ae",
-                "fees": 3000
-            },
-            {
                 "address": "0xccdfcd1aac447d5b29980f64b831c532a6a33726",
                 "fees": 500
             },
             {
-                "address": "0x0f338ec12d3f7c3d77a4b9fcc1f95f3fb6ad0ea6",
-                "fees": 500
+                "address": "0x87bb7b9d2b5cafc6222e8bae244b7a64185386ba",
+                "fees": 10000
             },
             {
-                "address": "0x77ad66e311cf17717ff644cd9fabe3282eb74ffc",
+                "address": "0x7862d9b4be2156b15d54f41ee4ede2d5b0b455e4",
+                "fees": 3000
+            },
+            {
+                "address": "0x7548a615198d88e190f1aedcd39d23721f9c68f9",
+                "fees": 10000
+            },
+            {
+                "address": "0x87c029bbb64c39a2a6762ac0e031757d2974e275",
+                "fees": 10000
+            },
+            {
+                "address": "0x06396509195eb9e07c38a016694dc9ff535b128a",
+                "fees": 3000
+            },
+            {
+                "address": "0x6fe9e9de56356f7edbfcbb29fab7cd69471a4869",
                 "fees": 500
             },
             {
@@ -49,243 +69,43 @@
                 "fees": 500
             },
             {
-                "address": "0xf624649736a106f2aa16e8027ce9aeed1bcd22f9",
-                "fees": 3000
+                "address": "0x0f338ec12d3f7c3d77a4b9fcc1f95f3fb6ad0ea6",
+                "fees": 500
             },
             {
-                "address": "0x2224a1c14c3a34b48e51e9e01e74823395eb7a63",
+                "address": "0x7e69df262deff3de8109ad5d8935d77aa8b0fc08",
                 "fees": 100
             },
             {
-                "address": "0xef84729d04a62325d3229add95ffc29ba8a224e3",
-                "fees": 10000
-            },
-            {
-                "address": "0x54cf8ff9d72c6564f6e65218e71533a854279ead",
-                "fees": 10000
-            },
-            {
-                "address": "0xc00715096d36d314990e26d82f03ea74ca63584e",
+                "address": "0x50fcf804bd78a9f48cc05f07fe932a860ee50e03",
                 "fees": 3000
-            },
-            {
-                "address": "0x4ef938b633d704f29e593a8b51148d43429d0bc4",
-                "fees": 3000
-            },
-            {
-                "address": "0xfc2c720d9c4b781745a1701b31f89074f311c92a",
-                "fees": 10000
-            },
-            {
-                "address": "0xad0794fe6598282878bd21421570ef86670ef7c4",
-                "fees": 3000
-            },
-            {
-                "address": "0xad49a27684df5a1dcc13ac30fc8081a1b5f3fc09",
-                "fees": 500
-            },
-            {
-                "address": "0xd4052f73e6138d77e2ba2fb31ff68ea3eb1ce0da",
-                "fees": 3000
-            },
-            {
-                "address": "0xb7a3ea276b10e0fb5c0d26d7e1fc6ecb8ed575e2",
-                "fees": 500
-            },
-            {
-                "address": "0xac18e282c0b89a9981520e148ddd2bf9592e440c",
-                "fees": 100
-            },
-            {
-                "address": "0x38df85c7d266deb3bf679501d8a8dcaf71c3672f",
-                "fees": 10000
-            },
-            {
-                "address": "0x71d48ffb6b6127407a1d287fa4635801034ae427",
-                "fees": 3000
-            },
-            {
-                "address": "0xefe64730fa4a0c0dd01e68011af58c30e0e5f152",
-                "fees": 10000
-            },
-            {
-                "address": "0x4c1d39e6b736a6a99105ee2a9e7c44bfc56af860",
-                "fees": 3000
-            },
-            {
-                "address": "0xf9cac87b0c63b6ca7345e13cd1b10567e3a8cbe4",
-                "fees": 500
-            },
-            {
-                "address": "0x3373a22cb07cb49651b82cf6f174ef434e4dbaa8",
-                "fees": 3000
-            },
-            {
-                "address": "0xbe6766591bf836507a5f3eae2368f2ea7ad515c1",
-                "fees": 3000
-            },
-            {
-                "address": "0x7bbce1442cae0ce3eb79c12b8b0032dff93e1ae7",
-                "fees": 10000
-            },
-            {
-                "address": "0xcb99fe720124129520f7a09ca3cbef78d58ed934",
-                "fees": 500
-            },
-            {
-                "address": "0xfe4fe5b4575c036ac6d5cccfe13660020270e27a",
-                "fees": 3000
-            },
-            {
-                "address": "0xd89d42eeb0e64efb5bbde6e4c5d6afccbf3fead3",
-                "fees": 3000
-            },
-            {
-                "address": "0x107c1dcb81234146400c96bc3e1252b42cde7d3e",
-                "fees": 10000
-            },
-            {
-                "address": "0xfdd6b85018a781922eb7babf4c1510e98e1d992d",
-                "fees": 10000
-            },
-            {
-                "address": "0x28df0835942396b7a1b7ae1cd068728e6ddbbafd",
-                "fees": 500
-            },
-            {
-                "address": "0xddf0be52cdbbe3e87b48c27f41502133381ed2f4",
-                "fees": 10000
-            },
-            {
-                "address": "0x84e47c7f2fe86f6b5efbe14fee46b8bb871b2e05",
-                "fees": 500
-            },
-            {
-                "address": "0x8a2cda336a21420993a013da3055ed650c4b99ed",
-                "fees": 500
-            },
-            {
-                "address": "0x1cdcd7fe455e2adc0449263d98c20f9f92679506",
-                "fees": 10000
-            },
-            {
-                "address": "0x32776ed4d96ed069a2d812773f0ad8ad9ef83cf8",
-                "fees": 3000
-            },
-            {
-                "address": "0x17507bef4c3abc1bc715be723ee1baf571256e05",
-                "fees": 3000
-            },
-            {
-                "address": "0x44d23658a5d5ce0e7e12007b67748f07c4fad4f9",
-                "fees": 3000
-            },
-            {
-                "address": "0x06396509195eb9e07c38a016694dc9ff535b128a",
-                "fees": 3000
-            },
-            {
-                "address": "0x87c029bbb64c39a2a6762ac0e031757d2974e275",
-                "fees": 10000
-            },
-            {
-                "address": "0xe15c03d4ce70d2102d8d7a4e42af677a5ac7ee16",
-                "fees": 100
-            },
-            {
-                "address": "0x6fe9e9de56356f7edbfcbb29fab7cd69471a4869",
-                "fees": 500
-            },
-            {
-                "address": "0x7862d9b4be2156b15d54f41ee4ede2d5b0b455e4",
-                "fees": 3000
-            },
-            {
-                "address": "0x0bfebcaa1873ff6bac70b36a54860d301d434e43",
-                "fees": 3000
-            },
-            {
-                "address": "0x3bebf7481c7ce92459cb0dff25bd48e6e4adf836",
-                "fees": 3000
-            },
-            {
-                "address": "0xa47f717929b7de4d131af93c39627531fe623c9a",
-                "fees": 3000
-            },
-            {
-                "address": "0x5289a8dbf7029ee0b0498a84777ed3941d9acfec",
-                "fees": 500
-            },
-            {
-                "address": "0x58baa797b4605676a275118b52d83a77efefe77a",
-                "fees": 10000
-            },
-            {
-                "address": "0x81bc633a3a671136e6744a294eac26c8a190628e",
-                "fees": 3000
-            },
-            {
-                "address": "0x554548b404213c7efcdbab933f52edfe3c581834",
-                "fees": 10000
-            },
-            {
-                "address": "0x57d673669d2649a4ec6a244208c2d74f77347958",
-                "fees": 10000
             },
             {
                 "address": "0x023b6298e2f9ae728b324757599f2a36e002a55a",
                 "fees": 10000
             },
             {
-                "address": "0xb873e889f28e3d2c86f2495820dd5eca329bddf4",
-                "fees": 3000
+                "address": "0x4444aa182e3bfb91c2af7ed3b28c8894c12f11d1",
+                "fees": 10000
             },
             {
                 "address": "0xb46bf2ff1186c4e126996d1f57821af4fb407f00",
                 "fees": 3000
             },
             {
-                "address": "0x35c7b783370d01304623ae820873a930cdc90c33",
+                "address": "0xb623146e2e41f19947bc9f7f30f7f5e703264683",
                 "fees": 10000
             },
             {
-                "address": "0x4fb87838a29b37598099ef5aa6b3fbeeef987c50",
-                "fees": 3000
-            },
-            {
-                "address": "0x4361aaffc616809a8536ea3d5afff3d1b87921a4",
-                "fees": 10000
-            },
-            {
-                "address": "0xe920985aa7ea6e6eb4eb72d09eedd743005262c4",
-                "fees": 3000
-            },
-            {
-                "address": "0xb8dee152c5f965505154a569183ed08924e45ab6",
-                "fees": 3000
-            },
-            {
-                "address": "0xfa7d79f971a70771e5e92bd80ab955edc8602f4d",
-                "fees": 3000
-            },
-            {
-                "address": "0x45c8d10a013c313d20984cfe4931fc276666b1df",
-                "fees": 10000
+                "address": "0x5289a8dbf7029ee0b0498a84777ed3941d9acfec",
+                "fees": 500
             },
             {
                 "address": "0x2c3c320d49019d4f9a92352e947c7e5acfe47d68",
                 "fees": 100
             },
             {
-                "address": "0x4a978a2d4fb7393063babfb0cee741b8bcd4dd4b",
-                "fees": 3000
-            },
-            {
-                "address": "0x5e913cd202cbb940d6de5c6f85b77fc72602cb3b",
-                "fees": 10000
-            },
-            {
-                "address": "0xde24c6714cb3c702e0a2ee1fbdf604c6ec095564",
+                "address": "0x41bf5eeae051fbd2e97b76b5f8f0fdcc1a1e526b",
                 "fees": 10000
             },
             {
@@ -293,12 +113,16 @@
                 "fees": 10000
             },
             {
-                "address": "0x1972de321f65658bd897dc27e01ba411d92386a6",
+                "address": "0x5e913cd202cbb940d6de5c6f85b77fc72602cb3b",
                 "fees": 10000
             },
             {
                 "address": "0xb3709d0e16b618b15ee4bcf82d19b9e7d4100914",
                 "fees": 3000
+            },
+            {
+                "address": "0xe43241f8d01bcbdaff872f8dc60d98595317d3ab",
+                "fees": 10000
             },
             {
                 "address": "0xf422a9292434e4592ea044177e89939b9d7bd881",
@@ -309,12 +133,64 @@
                 "fees": 10000
             },
             {
-                "address": "0xde3dff2ee6dbe835cb8c014060f2854582e9a8f1",
+                "address": "0x4d170f8714367c44787ae98259ce8adb72240067",
                 "fees": 10000
+            },
+            {
+                "address": "0x58baa797b4605676a275118b52d83a77efefe77a",
+                "fees": 10000
+            },
+            {
+                "address": "0x47a90a2d92a8367a91efa1906bfc8c1e05bf10c4",
+                "fees": 100
+            },
+            {
+                "address": "0x4fb87838a29b37598099ef5aa6b3fbeeef987c50",
+                "fees": 3000
+            },
+            {
+                "address": "0xdbc6154ea4ce72c083fc749e1a9a71dad8fb6e2c",
+                "fees": 100
+            },
+            {
+                "address": "0x4361aaffc616809a8536ea3d5afff3d1b87921a4",
+                "fees": 10000
+            },
+            {
+                "address": "0x48f47c20a7713e3181cd9a7da3344b66fbf706be",
+                "fees": 10000
+            },
+            {
+                "address": "0xcb717d0d9574dbd1b1d15eb066765fd76c87e87c",
+                "fees": 3000
+            },
+            {
+                "address": "0x329eeb1a58bdb3b804d1f94623c7a29a67a9b6b7",
+                "fees": 3000
+            },
+            {
+                "address": "0x70c132a2ddeccf0d76cc9b64a749ffe375a79a21",
+                "fees": 500
+            },
+            {
+                "address": "0x4bd9a4017b56f1c1dfb4ac9e1961f768c4e2be9c",
+                "fees": 3000
             },
             {
                 "address": "0x6bcb0ba386e9de0c29006e46b2f01f047ca1806e",
                 "fees": 3000
+            },
+            {
+                "address": "0x534d3930edba2c0b90a7973549a0287141c987ef",
+                "fees": 3000
+            },
+            {
+                "address": "0xb117244650a2741b40871256dca355e3903b3f48",
+                "fees": 3000
+            },
+            {
+                "address": "0xbe7cc96a863bdb43e25896664cf0e3c65f7973eb",
+                "fees": 100
             },
             {
                 "address": "0x3fb2623567e21f8c50f0ae86f54ef4849b4eb47b",
@@ -337,6 +213,58 @@
                 "fees": 10000
             },
             {
+                "address": "0x85d3f8a47314eeb541e2ee1bc7af44efb7c28cf1",
+                "fees": 10000
+            },
+            {
+                "address": "0x17507bef4c3abc1bc715be723ee1baf571256e05",
+                "fees": 3000
+            },
+            {
+                "address": "0x1cdcd7fe455e2adc0449263d98c20f9f92679506",
+                "fees": 10000
+            },
+            {
+                "address": "0x32776ed4d96ed069a2d812773f0ad8ad9ef83cf8",
+                "fees": 3000
+            },
+            {
+                "address": "0xb7a3ea276b10e0fb5c0d26d7e1fc6ecb8ed575e2",
+                "fees": 500
+            },
+            {
+                "address": "0x38df85c7d266deb3bf679501d8a8dcaf71c3672f",
+                "fees": 10000
+            },
+            {
+                "address": "0xac18e282c0b89a9981520e148ddd2bf9592e440c",
+                "fees": 100
+            },
+            {
+                "address": "0xdfc50f2eaddc45805afbe63839b2dc98d7434dd4",
+                "fees": 10000
+            },
+            {
+                "address": "0xcb99fe720124129520f7a09ca3cbef78d58ed934",
+                "fees": 500
+            },
+            {
+                "address": "0xd89d42eeb0e64efb5bbde6e4c5d6afccbf3fead3",
+                "fees": 3000
+            },
+            {
+                "address": "0x84e47c7f2fe86f6b5efbe14fee46b8bb871b2e05",
+                "fees": 500
+            },
+            {
+                "address": "0x107c1dcb81234146400c96bc3e1252b42cde7d3e",
+                "fees": 10000
+            },
+            {
+                "address": "0x28df0835942396b7a1b7ae1cd068728e6ddbbafd",
+                "fees": 500
+            },
+            {
                 "address": "0x275850845ea17e4d95e6ea3b235be12c8c05ef77",
                 "fees": 10000
             },
@@ -345,48 +273,40 @@
                 "fees": 3000
             },
             {
-                "address": "0x14269bf6556767319fa5cff29cc3bf7255842f08",
-                "fees": 10000
-            },
-            {
-                "address": "0x1a79c4472dca9d2fb31f3f59ced57c1a20b54abb",
-                "fees": 3000
-            },
-            {
-                "address": "0x329eeb1a58bdb3b804d1f94623c7a29a67a9b6b7",
-                "fees": 3000
-            },
-            {
-                "address": "0x7bcc079855b3c8930a5f172b8d8bdeb68d9214ef",
-                "fees": 10000
-            },
-            {
-                "address": "0x70c132a2ddeccf0d76cc9b64a749ffe375a79a21",
-                "fees": 500
-            },
-            {
-                "address": "0x01b1cdd150316717410961fb08616a943144ad9f",
-                "fees": 500
-            },
-            {
-                "address": "0x4bd9a4017b56f1c1dfb4ac9e1961f768c4e2be9c",
-                "fees": 3000
-            },
-            {
-                "address": "0x534d3930edba2c0b90a7973549a0287141c987ef",
-                "fees": 3000
-            },
-            {
-                "address": "0xb117244650a2741b40871256dca355e3903b3f48",
-                "fees": 3000
-            },
-            {
-                "address": "0xbe7cc96a863bdb43e25896664cf0e3c65f7973eb",
+                "address": "0x2224a1c14c3a34b48e51e9e01e74823395eb7a63",
                 "fees": 100
             },
             {
-                "address": "0x85d3f8a47314eeb541e2ee1bc7af44efb7c28cf1",
+                "address": "0x54cf8ff9d72c6564f6e65218e71533a854279ead",
                 "fees": 10000
+            },
+            {
+                "address": "0xc00715096d36d314990e26d82f03ea74ca63584e",
+                "fees": 3000
+            },
+            {
+                "address": "0xfc2c720d9c4b781745a1701b31f89074f311c92a",
+                "fees": 10000
+            },
+            {
+                "address": "0xefe64730fa4a0c0dd01e68011af58c30e0e5f152",
+                "fees": 10000
+            },
+            {
+                "address": "0x4c1d39e6b736a6a99105ee2a9e7c44bfc56af860",
+                "fees": 3000
+            },
+            {
+                "address": "0x1c73ea7dcbac814a7b282b31f64784f03ba2e2bf",
+                "fees": 10000
+            },
+            {
+                "address": "0xbe6766591bf836507a5f3eae2368f2ea7ad515c1",
+                "fees": 3000
+            },
+            {
+                "address": "0x3373a22cb07cb49651b82cf6f174ef434e4dbaa8",
+                "fees": 3000
             }
         ],
         "metadata": {
@@ -394,11 +314,11 @@
                 "address",
                 "fees"
             ],
-            "result_set_bytes": 4584,
-            "total_row_count": 95,
-            "datapoint_count": 190,
-            "pending_time_millis": 2591330,
-            "execution_time_millis": 13491
+            "result_set_bytes": 3625,
+            "total_row_count": 75,
+            "datapoint_count": 150,
+            "pending_time_millis": 15370,
+            "execution_time_millis": 41975
         }
     }
 }
