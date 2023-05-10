@@ -45,8 +45,7 @@ async function readPoolsFromDisk(chain) {
 				reject(err);
 			} else {
 				console.log(`${chain} pools data ready`);
-				const poolsAndFees = JSON.parse(data).result.rows;
-				
+				const poolsAndFees = JSON.parse(data).result.rows || null;
 				resolve(poolsAndFees);
 			}
 			})
