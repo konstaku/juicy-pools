@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "test",
-    "run": "node main.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
