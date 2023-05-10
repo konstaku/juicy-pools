@@ -29,7 +29,9 @@ export const poolList = [
 
 export async function refreshPoolData(pools) {
     try {
-        const data = await Promise.all(pools.map(pool => getData(pool.queryId)));
+        const data = await Promise.all(
+            pools.map(pool => getData(pool.queryId))
+        );
 
         await Promise.all(
             data.map((el, index) =>
@@ -39,8 +41,7 @@ export async function refreshPoolData(pools) {
                 )
             )
         );
-    } 
-    catch (error) {
+    } catch (error) {
         console.log('*** Error refreshing pools ***', error);
     }
 
@@ -65,7 +66,6 @@ async function getData(queryId) {
         'x-dune-api-key': DUNE_API_KEY,
     };
 
-    
     try {
         // Sending an execution request
         const request = await fetch(
@@ -75,10 +75,9 @@ async function getData(queryId) {
                 headers: header,
             }
         );
-    
+
         const requestData = await request.json();
         const executionId = requestData.execution_id;
-
 
         console.log(`Query #${queryId} pending...`);
 
@@ -113,7 +112,6 @@ async function getData(queryId) {
             console.log(`Query #${queryId} completed`);
             break;
         }
-   
 
         // Fetching results
         const result = await fetch(
@@ -125,9 +123,7 @@ async function getData(queryId) {
         );
         const data = await result.json();
         return data;
-    } 
-    
-    catch (err) {
+    } catch (err) {
         console.log('*** Error fetching query results ***', err);
     }
 }
