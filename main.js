@@ -117,7 +117,13 @@ async function fetchPoolsForChain(poolList) {
 
 	for (let i = 0; i < poolList.pools.length; i++) {
 		const pool = poolList.pools[i];
-		const entry = result[i].pairs[0] || null;
+
+		if (!result[i].pairs) {
+			console.log(`+++ No pairs for ${chain} +++`);
+			continue;
+		}
+
+		const entry = result[i].pairs[0];
 
 		if (!entry || !entry.liquidity) {
 			console.log(`No liquidity info for pool ${entry.baseToken.symbol}/${entry.quoteToken.symbol}!`);
