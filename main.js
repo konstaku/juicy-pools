@@ -118,7 +118,7 @@ async function fetchPoolsForChain(poolList) {
 	for (let i = 0; i < poolList.pools.length; i++) {
 		const pool = poolList.pools[i];
 
-		if (!result[i].pairs) {
+		if (result[i].pairs == undefined) {
 			console.log(`+++ No pairs for ${chain} +++`);
 			continue;
 		}
