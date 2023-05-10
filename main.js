@@ -1,9 +1,9 @@
 'use strict';
 
 import express from 'express';
-import { readFile, writeFile } from 'fs';
+import { readFile } from 'fs';
 import { poolList, refreshPoolData } from './refreshPoolsAndFees.js';
-import { bot, updateBot, formatMessage } from './telegramBot.js';
+import { updateBot, formatMessage } from './telegramBot.js';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
@@ -14,45 +14,62 @@ const server = app.listen(PORT, () => {
 
 async function prepareFetchData(chains) {
 	console.log('Preparing blockchain data...');
-	const promises = chains.map(chain => readPoolsFromDisk(chain));
-	// Using Promise.all instead a for loop, so I have all the data filled before moving next
-	const poolData = await Promise.all(promises);
 
-	const preparedData = chains.map((chain, index) => {
-		const poolInfo = {};
-		poolInfo.chain = chain;
-		poolInfo.pools = poolData[index];
-		// Normalize fees (3000 = 0.3)
-		poolInfo.pools.forEach(el => el.fees /= 10000);
-		return poolInfo;
-	});
+	try {
+		const promises = chains.map(chain => readPoolsFromDisk(chain));
+		// Using Promise.all instead a for loop, so I have all the data filled before moving next
+		const poolData = await Promise.all(promises);
 
-	return preparedData;
+		const preparedData = chains.map((chain, index) => {
+			const poolInfo = {};
+			poolInfo.chain = chain;
+			poolInfo.pools = poolData[index];
+			// Normalize fees (3000 = 0.3)
+			poolInfo.pools.forEach(el => el.fees /= 10000);
+			return poolInfo;
+		});
+
+		return preparedData;
+	}
+	catch (err) {
+		console.log('*** Error preparing fetch data', err);
+	}
 }
 
 async function readPoolsFromDisk(chain) {
-	return new Promise((resolve, reject) => {
-		readFile(`./data/uni_v3_${chain}_pools_and_fees.json`, 'utf-8', (err, data) => {
-		if (err) {
-			reject(err);
-		} else {
-			console.log(`${chain} pools data ready`);
-			const poolsAndFees = JSON.parse(data).result.rows;
-			
-			resolve(poolsAndFees);
-		}
-		})
-	});
+
+	try {
+		return new Promise((resolve, reject) => {
+			readFile(`./data/uni_v3_${chain}_pools_and_fees.json`, 'utf-8', (err, data) => {
+			if (err) {
+				reject(err);
+			} else {
+				console.log(`${chain} pools data ready`);
+				const poolsAndFees = JSON.parse(data).result.rows;
+				
+				resolve(poolsAndFees);
+			}
+			})
+		});
+	} 
+	catch (err) {
+		console.log('*** Error reading pools from disk ***', err);
+	}
+	
 }
 
 async function fetchPoolData(chainsAndPools) {
 	const result = [];
 
-	for (let i = 0; i < chainsAndPools.length; i++) {
-		await fetchPoolsForChain(chainsAndPools[i]);
-		sortPoolsByVitality(chainsAndPools[i]);
-		selectTop20Pools(chainsAndPools[i]);
-		result.push(formatMessage(chainsAndPools[i]))
+	try {
+		for (let i = 0; i < chainsAndPools.length; i++) {
+			await fetchPoolsForChain(chainsAndPools[i]);
+			sortPoolsByVitality(chainsAndPools[i]);
+			selectTop20Pools(chainsAndPools[i]);
+			result.push(formatMessage(chainsAndPools[i]))
+		}
+	} catch (err) {
+		console.log('*** Error fetching pool data ***', err);
 	}
 
 	return result;
@@ -74,22 +91,28 @@ async function fetchPoolsForChain(poolList) {
 	}
   
 	let currentPool = 0;
-  
-	while (currentPool < pools.length) {
-		const batch = pools.slice(currentPool, currentPool + batchSize);
-		const promises = batch.map(pool => {
-			return fetch(`https://api.dexscreener.com/latest/dex/pairs/${chain}/${pool.address}`);
-		});
-	
-		const responses = await Promise.all(promises);
-		const data = await Promise.all(responses.map(el => el.json()));
-		result.push(...data);
-	
-		console.log(`Fetching ${currentPool + 1}-${currentPool + batch.length} of ${pools.length} ${chain} pools`);
-	
-		currentPool += batchSize;
-		await new Promise(resolve => setTimeout(resolve, cooldown));
+
+	try {
+		while (currentPool < pools.length) {
+			const batch = pools.slice(currentPool, currentPool + batchSize);
+			const promises = batch.map(pool => {
+				return fetch(`https://api.dexscreener.com/latest/dex/pairs/${chain}/${pool.address}`);
+			});
+		
+			const responses = await Promise.all(promises);
+			const data = await Promise.all(responses.map(el => el.json()));
+			result.push(...data);
+		
+			console.log(`Fetching ${currentPool + 1}-${currentPool + batch.length} of ${pools.length} ${chain} pools`);
+		
+			currentPool += batchSize;
+			await new Promise(resolve => setTimeout(resolve, cooldown));
+		}
 	}
+	catch (err) {
+		console.log(`*** Error fetching pool ${poolList.chain} from dexscreener ***`, err);
+	}
+	
   
 	console.log(`Done fetching ${pools.length} ${chain} pools`);
 
@@ -124,8 +147,13 @@ function selectTop20Pools(poolList) {
 async function updateTelegramBot(data) {
 	console.log('Updating telegram bot...');
 
-	for (const entry of data) {
-		await updateBot(entry);
+	try {
+		for (const entry of data) {
+			await updateBot(entry);
+		}
+	}
+	catch (err) {
+		console.log('*** Error updating telegram bot ***', err);
 	}
 }
 
@@ -133,7 +161,7 @@ refreshPoolData(poolList)
 	.then(pools => prepareFetchData(pools.map(el => el.network)))
 	.then(result => fetchPoolData(result))
 	.then(data => updateTelegramBot(data))
-	.catch(e => console.log(e))
+	.catch(e => console.log('*** Error in promise chain ***', e))
 	.finally(() => {
 		console.log('All pool data read successfully!');
 		server.close(() => {
