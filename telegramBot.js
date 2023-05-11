@@ -9,9 +9,22 @@ const options = {
     disable_web_page_preview: true,
 };
 
-export const bot = new TelegramBot(token);
+export const bot = new TelegramBot(token, { polling: true });
 
-export async function updateBot(text) {
+export async function updateTelegramBot(data) {
+	console.log('Updating telegram bot...');
+
+	try {
+		for (const entry of data) {
+			await updateBot(entry);
+		}
+	}
+	catch (err) {
+		console.log('*** Error updating telegram bot ***', err);
+	}
+}
+
+async function updateBot(text) {
     try {
         await bot.sendMessage(chat, text.toString(), options);
         console.log('Telegram bot updated');
@@ -21,23 +34,4 @@ export async function updateBot(text) {
     }
 }
 
-export function formatMessage(data) {
 
-    let message = `🔥🔥🔥 Top 20 pools on ${data.chain}: 🔥🔥🔥`;
-
-    for (const pool of data.pools) {
-        pool.name = pool.name
-            .replace('<', '&lt;')
-            .replace('>', '&gt;')
-            .replace('&', '&amp;');
-            
-        message += `
-        Pool: <a href="${pool.url}">${pool.name}</a>
-        TVL: $${pool.tvl}
-        24h Vol: $${pool.volume}
-        Vitality: ${pool.vitality}
-        `;
-    }
-
-    return message;
-}

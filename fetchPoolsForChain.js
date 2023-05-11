@@ -6,7 +6,7 @@ const cooldown = MILLISECONDS_IN_MINUTE / MINUTE_FETCH_LIMIT * batchSize;
 
 export async function fetchPoolsForChain(poolList) {
 	const result = [];
-	const chain = poolList.chain;
+	const chain = poolList.network;
 	const pools = poolList.pools;
   
 	if (poolList.pools.length == 0) {

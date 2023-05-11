@@ -1,6 +1,5 @@
 'use strict';
-
-import { writeFile } from 'fs';
+import cron from 'node-cron';
 
 const DUNE_API_KEY = 'r6omw302w3fPYQbCAZNgq40zxwc0E78I';
 
@@ -27,38 +26,22 @@ export const poolList = [
     },
 ];
 
-export async function refreshPoolData(pools) {
+// const duneDailyJob = updateDuneQuery(poolList);
+
+// cron.schedule('0 4 * * *', duneDailyJob);
+
+export async function updateDuneQuery(pools) {
     try {
-        const data = await Promise.all(
+        Promise.all(
             pools.map(pool => getData(pool.queryId))
         );
-
-        await Promise.all(
-            data.map((el, index) =>
-                writeData(
-                    `./data/uni_v3_${pools[index].network}_pools_and_fees.json`,
-                    JSON.stringify(el, null, 4)
-                )
-            )
-        );
+        
     } catch (error) {
         console.log('*** Error refreshing pools ***', error);
     }
 
     console.log('All chains updated successfully');
     return pools;
-}
-
-async function writeData(path, data) {
-    return new Promise((resolve, reject) => {
-        writeFile(path, data, error => {
-            if (error) {
-                reject('Error writing file' + path);
-            } else {
-                resolve();
-            }
-        });
-    });
 }
 
 async function getData(queryId) {
@@ -127,3 +110,15 @@ async function getData(queryId) {
         console.log('*** Error fetching query results ***', err);
     }
 }
+
+// async function writeData(path, data) {
+//     return new Promise((resolve, reject) => {
+//         writeFile(path, data, error => {
+//             if (error) {
+//                 reject('Error writing file' + path);
+//             } else {
+//                 resolve();
+//             }
+//         });
+//     });
+// }
