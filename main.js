@@ -1,10 +1,10 @@
 'use strict';
 import express from 'express';
-import { poolList } from './updateDuneQuery.js';
-import { updateTelegramBot } from './telegramBot.js';
-import { fetchPoolsForChain } from './fetchPoolsForChain.js';
-import { readPoolsFromDune } from './readPoolsFromDune.js';
-import * as dataOperations from './dataOperations.js';
+import { poolList } from './utils/updateDuneQuery.js';
+import { updateTelegramBot } from './utils/telegramBot.js';
+import { fetchPoolsForChain } from './utils/fetchPoolsForChain.js';
+import { readPoolsFromDune } from './utils/readPoolsFromDune.js';
+import * as dataOperations from './utils/dataOperations.js';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
