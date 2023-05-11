@@ -4,6 +4,7 @@ import express from 'express';
 import { readFile } from 'fs';
 import { poolList, refreshPoolData } from './refreshPoolsAndFees.js';
 import { updateBot, formatMessage } from './telegramBot.js';
+import { fetchPoolsForChain } from './fetchPoolsForChain.js';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
@@ -74,72 +75,6 @@ async function fetchPoolData(chainsAndPools) {
 	return result;
 }
 
-async function fetchPoolsForChain(poolList) {
-	const MILLISECONDS_IN_MINUTE = 60000;
-	const MINUTE_FETCH_LIMIT = 300;
-	const batchSize = 30;
-	const cooldown = MILLISECONDS_IN_MINUTE / MINUTE_FETCH_LIMIT * batchSize;
-	
-	const result = [];
-	const chain = poolList.chain;
-	const pools = poolList.pools;
-  
-	if (poolList.pools.length == 0) {
-		console.log(`Unable to make batches for ${chain}, pool list empty`);
-		return poolList;
-	}
-  
-	let currentPool = 0;
-
-	try {
-		while (currentPool < pools.length) {
-			const batch = pools.slice(currentPool, currentPool + batchSize);
-			const promises = batch.map(pool => {
-				return fetch(`https://api.dexscreener.com/latest/dex/pairs/${chain}/${pool.address}`);
-			});
-		
-			const responses = await Promise.all(promises);
-			const data = await Promise.all(responses.map(el => el.json()));
-			result.push(...data);
-		
-			console.log(`Fetching ${currentPool + 1}-${currentPool + batch.length} of ${pools.length} ${chain} pools`);
-		
-			currentPool += batchSize;
-			await new Promise(resolve => setTimeout(resolve, cooldown));
-		}
-	}
-	catch (err) {
-		console.log(`*** Error fetching pool ${poolList.chain} from dexscreener ***`, err);
-	}
-	
-  
-	console.log(`Done fetching ${pools.length} ${chain} pools`);
-
-	for (let i = 0; i < poolList.pools.length; i++) {
-		const pool = poolList.pools[i];
-
-		if (result[i].pairs == undefined) {
-			console.log(`+++ No pairs for ${chain} +++`);
-			continue;
-		}
-
-		const entry = result[i].pairs[0];
-
-		if (!entry || !entry.liquidity) {
-			console.log(`No liquidity info for pool ${entry.baseToken.symbol}/${entry.quoteToken.symbol}!`);
-			continue;
-		}
-
-		pool.url = entry.url;
-		pool.tvl = Math.round(entry.liquidity.usd) || null;
-		pool.volume = Math.round(entry.volume.h24);
-		pool.vitality = Math.round(pool.volume / pool.tvl * pool.fees * 100) / 100 || null;
-		pool.name = `${entry.baseToken.symbol}/${entry.quoteToken.symbol}`;
-	}
-
-	return poolList;
-}
-
 function sortPoolsByVitality(poolList) {
 	poolList.pools = poolList.pools.filter(el => ((el.vitality != null && el.tvl != null) && (el.tvl >= 1000 && el.volume >= 1000)));
 	poolList.pools = poolList.pools.sort((a, b) => b.vitality - a.vitality);
@@ -162,8 +97,12 @@ async function updateTelegramBot(data) {
 	}
 }
 
-refreshPoolData(poolList)
-	.then(pools => prepareFetchData(pools.map(el => el.network)))
+// refreshPoolData(poolList)
+// 	.then(pools => prepareFetchData(pools.map(el => el.network)))
+
+const chains = poolList.map(el => el.network);
+
+prepareFetchData(chains)
 	.then(result => fetchPoolData(result))
 	.then(data => updateTelegramBot(data))
 	.catch(e => console.log('*** Error in promise chain ***', e))

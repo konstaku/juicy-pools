@@ -17,6 +17,7 @@ export async function updateBot(text) {
         console.log('Telegram bot updated');
     } catch (err) {
         console.log('Error updating telegram:', err);
+        console.log('Problem text:', text);
     }
 }
 
@@ -25,6 +26,11 @@ export function formatMessage(data) {
     let message = `🔥🔥🔥 Top 20 pools on ${data.chain}: 🔥🔥🔥`;
 
     for (const pool of data.pools) {
+        pool.name = pool.name
+            .replace('<', '&lt;')
+            .replace('>', '&gt;')
+            .replace('&', '&amp;');
+            
         message += `
         Pool: <a href="${pool.url}">${pool.name}</a>
         TVL: $${pool.tvl}
