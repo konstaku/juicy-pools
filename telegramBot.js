@@ -9,7 +9,7 @@ const options = {
     disable_web_page_preview: true,
 };
 
-export const bot = new TelegramBot(token, { polling: true });
+export const bot = new TelegramBot(token);
 
 export async function updateTelegramBot(data) {
 	console.log('Updating telegram bot...');
