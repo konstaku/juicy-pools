@@ -45,20 +45,31 @@ export async function fetchPoolsForChain(poolList) {
 }
 
 function enrichPoolData(poolList, fetchedData) {
-    for (let i = 0; i < poolList.pools.length; i++) {
-        const pool = poolList.pools[i];
-        let entry = fetchedData[i] ? fetchedData[i].pairs[0] : null;
 
-        if (!entry.liquidity) {
-            console.log(`No liquidity info for pool ${entry.baseToken.symbol}/${entry.quoteToken.symbol}!`);
-            entry = null;
-            continue;
-        }
+	try {
+		for (let i = 0; i < poolList.pools.length; i++) {
 
-        pool.url = entry.url;
-        pool.tvl = Math.round(entry.liquidity.usd) || null;
-        pool.volume = Math.round(entry.volume.h24);
-        pool.vitality = Math.round(pool.volume / pool.tvl * pool.fees * 100) / 100 || null;
-        pool.name = `${entry.baseToken.symbol}/${entry.quoteToken.symbol}`;
+			if (fetchedData[i].pair == null || fetchedData[i].pairs == null) {
+				console.log(`Pool #${i}: data empty`);
+				continue;
+			}
+
+			const pool = poolList.pools[i];
+			let entry = fetchedData[i] ? fetchedData[i].pairs[0] : null;
+	
+			if (!entry.liquidity) {
+				console.log(`No liquidity info for pool ${entry.baseToken.symbol}/${entry.quoteToken.symbol}!`);
+				entry = null;
+				continue;
+			}
+	
+			pool.url = entry.url;
+			pool.tvl = Math.round(entry.liquidity.usd) || null;
+			pool.volume = Math.round(entry.volume.h24);
+			pool.vitality = Math.round(pool.volume / pool.tvl * pool.fees * 100) / 100 || null;
+			pool.name = `${entry.baseToken.symbol}/${entry.quoteToken.symbol}`;
+		}
+	} catch (err) {
+		console.log('Error: Can\'t enrich pool data, index:', err);
 	}
 }
