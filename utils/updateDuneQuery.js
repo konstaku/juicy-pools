@@ -26,9 +26,8 @@ export const poolList = [
     },
 ];
 
-// const duneDailyJob = updateDuneQuery(poolList);
 
-// cron.schedule('0 4 * * *', duneDailyJob);
+cron.schedule('0 4 * * *', () => updateDuneQuery(poolList));
 
 export async function updateDuneQuery(pools) {
     try {
