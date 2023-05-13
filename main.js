@@ -1,37 +1,28 @@
 'use strict';
 import express from 'express';
-import { poolList } from './utils/updateDuneQuery.js';
-import { updateTelegramBot } from './utils/telegramBot.js';
-import { fetchPoolsForChain } from './utils/fetchPoolsForChain.js';
-import { readPoolsFromDune } from './utils/readPoolsFromDune.js';
-import * as format from './utils/format.js';
+import cron from 'node-cron';
+
+import { poolList, updateDuneQuery, readPoolsFromDune } from './utils/duneOperations.js';
+import { bot, updateTelegramBot, showMenu } from './utils/telegramBot.js';
 
 const app = express();
 const PORT = process.env.PORT || 3030;
 
+// Start server
 app.listen(PORT, () => {
 	console.log(`Server started on port ${PORT}`);
 });
 
-export async function fetchPoolData(chainsAndPools) {
-	const result = [];
+// Scheduling query refresh at 0400 daily
+cron.schedule('0 4 * * *', () => updateDuneQuery(poolList));
 
-	try {
-		for (let i = 0; i < chainsAndPools.length; i++) {
-			await fetchPoolsForChain(chainsAndPools[i]);
-			format.sortPoolsByVitality(chainsAndPools[i]);
-			format.selectTop20Pools(chainsAndPools[i]);
-			result.push(format.formatMessage(chainsAndPools[i]))
-		}
-	} catch (err) {
-		console.log('*** Error fetching pool data ***', err);
-	}
+// Main sequence
+// readPoolsFromDune(poolList)
+// 	.then(result => getJuicyPools(result))
+// 	.then(result => updateTelegramBot(result))
+// 	.catch(e => console.log(e));
 
-	return result;
-}
-
-readPoolsFromDune(poolList)
-	.then(result => fetchPoolData(result))
-	.then(result => updateTelegramBot(result))
-	.catch(e => console.log(e));
-
+bot.onText(/\/menu/, async (msg) => {
+	const chatId = msg.chat.id;
+	showMenu(chatId);
+});
