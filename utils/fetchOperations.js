@@ -1,8 +1,28 @@
 'use strict';
+import * as format from './format.js';
+
 const MILLISECONDS_IN_MINUTE = 60000;
 const MINUTE_FETCH_LIMIT = 300;
 const batchSize = 30;
 const cooldown = MILLISECONDS_IN_MINUTE / MINUTE_FETCH_LIMIT * batchSize;
+
+export async function getJuicyPools(chainsAndPools) {
+	console.log('launching function with:', chainsAndPools)
+	const result = [];
+
+	try {
+		for (let i = 0; i < chainsAndPools.length; i++) {
+			await fetchPoolsForChain(chainsAndPools[i]);
+			format.sortPoolsByVitality(chainsAndPools[i]);
+			format.selectTop20Pools(chainsAndPools[i]);
+			result.push(format.formatMessage(chainsAndPools[i]))
+		}
+	} catch (err) {
+		console.log('*** Error fetching pool data ***', err);
+	}
+
+	return result;
+}
 
 export async function fetchPoolsForChain(poolList) {
 	const result = [];
@@ -38,7 +58,6 @@ export async function fetchPoolsForChain(poolList) {
 	}
 
     enrichPoolData(poolList, result);
-  
 	console.log(`Done fetching ${pools.length} ${chain} pools`);
 
 	return poolList;
