@@ -80,8 +80,7 @@ async function fetchAndPost(query) {
             poolsToFetch[0].pools.length
         } ${chain} pools, \nEstimated waiting time ${timeToFetch} ${
             timeToFetch > 1 ? 'minutes' : 'minute'
-        }...
-        Please wait until query finishes befort starting next query`
+        }...\nPlease wait until current query finishes before starting next query.`
     );
     const result = await getJuicyPools(poolsToFetch);
 
